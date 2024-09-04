@@ -27,7 +27,7 @@ pipeline {
         }
         stage('docker deploy'){
             steps{
-                sh 'docker container rm -f codetest1'
+                sh 'docker container rm -f demotesting'
                 sh 'docker run --name codetest1 -itd -p 8080:8080 codetest1:${BUILD_NUMBER}'
                 echo 'docker container is created'
                 echo 'docker container is running'
